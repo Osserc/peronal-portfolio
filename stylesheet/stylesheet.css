@@ -52,9 +52,9 @@ table {
 body {
     display: flex;
     flex-direction: column;
+    gap: 15px;
     min-height: 100vh;
     max-width: 100%;
-    padding: 5px;
     box-sizing: border-box;
     color: goldenrod;
     animation: light-up 5s;
@@ -77,12 +77,22 @@ body::-webkit-scrollbar {
 button {
     transform: skew(-20deg);
     background: goldenrod;
+    box-shadow: 0 0 100px 0px black;
+    font-size: 18px;
+    transition: 1s;
+}
+
+button:hover {
+    background-color: rgb(255, 235, 123);
+    box-shadow: 4px 4px 2px black;
+    text-shadow: 1px 1px 0 black;
 }
 
 header {
     text-align: center;
     color: gold;
     font-size: 30px;
+    background-color: rgb(77, 15, 15);
 }
 
 .about-me {
@@ -125,7 +135,7 @@ header {
     margin: 0 auto;
     gap: 5px;
     opacity: 0.35;
-    background-color: blueviolet;
+    background-color: rgb(77, 15, 15);
     transition: 1.5s
 }
 
@@ -151,7 +161,7 @@ header {
 
 .old-js {
     grid-area: old-js;
-    width: 50%;
+    width: 40%;
     margin: auto;
 }
 
@@ -161,17 +171,18 @@ header {
     }
 }
 
-.monkebook-link, .chess-link, .assorted-games, .assorted-data-structures, .assorted-old-js {
+.project-buttons {
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 25px;
+    transition: 1.5s;
 }
 
-@media (max-width: 700px) {
-    .monkebook-link, .chess-link, .assorted-games, .assorted-data-structures, .assorted-old-js {
+@media (max-width: 950px) {
+    .project-buttons  {
         flex-direction: column;
-        gap: 5px;
+        gap: 15px;
     }
 }
 
@@ -191,3 +202,7 @@ p {
     overflow-wrap: normal;
     line-height: 20px;
 }
+
+::selection, ::-moz-selection {
+    background:#B2263A;
+} 
