@@ -78,7 +78,7 @@ button {
     transform: skew(-20deg);
     background: goldenrod;
     box-shadow: 0 0 100px 0px black;
-    font-size: 18px;
+    font-size: 17px;
     transition: 1s;
 }
 
@@ -91,8 +91,9 @@ button:hover {
 header {
     text-align: center;
     color: gold;
-    font-size: 30px;
+    font-size: 36px;
     background-color: rgb(77, 15, 15);
+    padding: 15px;
 }
 
 .about-me {
@@ -101,6 +102,19 @@ header {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    background-color: antiquewhite;
+    padding: 20px;
+    padding-top: 5px;
+    margin: auto;
+    font-size: 24px;
+    border-bottom-right-radius: 30%;
+    opacity: 0.8;
+}
+
+.about-me:after {
+    content: "";
+    width: 50px;
+    background-color: red;
 }
 
 .projects {
@@ -131,6 +145,7 @@ header {
     border-radius: 25px;
     border: 3px solid darkred;
     padding: 15px;
+    font-size: 20px;
     width: 80%;
     margin: 0 auto;
     gap: 5px;
