@@ -53,31 +53,85 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    min-width: 100vw;
+    max-width: 100%;
+    padding: 5px;
     box-sizing: border-box;
+    color: goldenrod;
+    animation: light-up 3.5s;
+    background-color: black;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes light-up {
+    0% {
+        opacity: 0;
+    }
+}
+
+button {
+    transform: skew(-20deg);
+    background: goldenrod;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     color: gold;
     font-size: 30px;
 }
 
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
 .projects {
+    width: auto;
     display: grid;
     grid-template:
         [row1-start] "monkebook chess" auto [row1-end]
-        [row2-start] "games games" auto [row2-end]
-        / 50% 50%;
+        [row2-start] "games data-structures" auto [row2-end]
+        [row3-start] "old-js old-js" auto [row3-end]
+        / 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .projects {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.single-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 80%;
+    margin: 0 auto;
+    gap: 5px;
+    opacity: 0.35;
+    background-color: blueviolet;
+    transition: 1.5s
+}
+
+.single-project:hover {
+    opacity: 1.5;
 }
 
 .monkebook {
     grid-area: monkebook;
-    display: flex;
-    flex-direction: column;
-    
 }
 
 .chess {
@@ -86,6 +140,36 @@ header {
 
 .games {
     grid-area: games;
+}
+
+.data-structures {
+    grid-area: data-structures;
+}
+
+.old-js {
+    grid-area: old-js;
+    width: 35%;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .old-js {
+        width: 80%;
+    }
+}
+
+.monkebook-link, .chess-link, .assorted-games, .assorted-data-structures, .assorted-old-js {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+@media (max-width: 700px) {
+    .monkebook-link, .chess-link, .assorted-games, .assorted-data-structures, .assorted-old-js {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
 .open-link {
@@ -97,4 +181,10 @@ footer {
     align-items: center;
     justify-content: center;
     margin-top: auto;
+}
+
+p {
+    text-align: center;
+    overflow-wrap: normal;
+    line-height: 20px;
 }
