@@ -94,6 +94,13 @@ header {
     font-size: 36px;
     background-color: rgb(77, 15, 15);
     padding: 15px;
+    animation: 3s outlines infinite alternate;
+}
+
+@keyframes outlines {
+    100% {
+        text-shadow: 3px 3px 5px violet;
+    }
 }
 
 .about-me {
