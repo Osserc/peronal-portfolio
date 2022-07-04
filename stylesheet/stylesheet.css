@@ -225,13 +225,6 @@ header {
     display: inline;
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto;
-}
-
 p {
     text-align: center;
     overflow-wrap: normal;
@@ -248,6 +241,19 @@ p {
 
 i {
     font-size: 30px;
+    transition: 1.5s;
+}
+
+i:hover {
+    font-size: 45px;
+}
+
+svg {
+    transition: 1.5s;
+}
+
+svg:hover {
+    transform: scale(1.5);
 }
 
 .contacts {
