@@ -111,7 +111,6 @@ header {
     background-color: #800020;
     padding: 20px;
     padding-top: 5px;
-    margin: auto;
     box-shadow: 0px 0px 10px 2px coral;
     font-size: 24px;
     opacity: 0.8;
@@ -165,7 +164,7 @@ header {
     border: 3px solid darkred;
     padding: 15px;
     font-size: 20px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     gap: 5px;
     opacity: 0.35;
@@ -196,13 +195,13 @@ header {
 
 .old-js {
     grid-area: old-js;
-    width: 40%;
+    width: 50%;
     margin: auto;
 }
 
 @media (max-width: 600px) {
     .old-js {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -210,7 +209,7 @@ header {
     background-color: darkviolet;
     padding: 10px;
     width: 50%;
-    border-radius: 50%;
+    border-radius: 50px;
     box-shadow: 0px 0px 10px violet;
     font-size: 28px;
 }
