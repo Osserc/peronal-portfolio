@@ -96,6 +96,7 @@ header {
     color: gold;
     font-size: 36px;
     padding-top: 15px;
+    margin-bottom: -15px;
     animation: 2s outlines infinite alternate;
 }
 
@@ -196,6 +197,11 @@ header {
 
 .monkebook {
     grid-area: monkebook;
+}
+
+.test {
+    margin-top: 10px;
+    margin-bottom: -15px;
 }
 
 .chess {
