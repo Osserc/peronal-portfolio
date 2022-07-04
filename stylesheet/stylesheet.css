@@ -206,6 +206,15 @@ header {
     }
 }
 
+.sub-header {
+    background-color: darkviolet;
+    padding: 10px;
+    width: 50%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px violet;
+    font-size: 28px;
+}
+
 .project-buttons {
     display: flex;
     align-items: center;
