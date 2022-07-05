@@ -49,12 +49,18 @@ table {
 }
 /* reset end */
 
+@font-face {
+    font-family: "Cormorant Garamond";
+    src:  url("../fonts/CormorantGaramond-Regular.ttf") format("truetype");
+  }
+
 body {
     display: flex;
     flex-direction: column;
     gap: 35px;
     min-height: 100vh;
     max-width: 100%;
+    font-family: "Cormorant Garamond", "Times New Roman";
     box-sizing: border-box;
     color: goldenrod;
     animation: light-up 5s;
