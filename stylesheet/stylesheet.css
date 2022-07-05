@@ -97,7 +97,7 @@ header {
     font-size: 36px;
     padding-top: 15px;
     margin-bottom: -15px;
-    animation: 2s change-color infinite alternate;
+    animation: 3s change-color infinite alternate;
     transition: 1.5s;
 }
 
@@ -106,8 +106,12 @@ header:hover {
 }
 
 @keyframes change-color {
-    100% {
+    50% {
         color: rgb(255, 235, 123);
+    }
+
+    100% {
+        color: rgb(252, 255, 164);
     }
 }
 
@@ -128,9 +132,16 @@ header:hover {
     transition: 1s;
 }
 
-.about-me:hover, .about-me:focus {
+.about-me:hover {
     opacity: 1;
     box-shadow: 0px 0px 10px 2px gold;
+}
+
+@media (hover: none) {
+    .about-me {
+        opacity: 1;
+        box-shadow: 0px 0px 10px 2px gold;
+    }
 }
 
 @media (max-width: 800px) {
@@ -143,6 +154,12 @@ header:hover {
     text-align: left;
     overflow-wrap: normal;
     margin: 15px 0;
+}
+
+@media (max-width: 800px) {
+    .message p {
+        text-align: center;
+    }
 }
 
 .projects {
@@ -213,13 +230,21 @@ header:hover {
     opacity: 0.35;
     background-color: rgb(53, 5, 5);
     box-shadow: 0 0 100px black;
-    transition: 1.5s
+    transition: 1.5s;
 }
 
-.single-project:hover, .single-project:active {
+.single-project:hover {
     opacity: 1;
     box-shadow: 0px 0px 10px 2px gold;
     transform: scale(1);
+}
+
+@media (hover: none) {
+    .single-project {
+        opacity: 1;
+        box-shadow: 0px 0px 10px 2px gold;
+        transform: scale(0.9);
+    }
 }
 
 .monkebook {
@@ -292,6 +317,12 @@ header:hover {
     padding: 10px;
     font-size: 32px;
     line-height: 26px;
+    width: 100%;
+    transition: 1.5s;
+}
+
+.sub-header:hover {
+    letter-spacing: 3px;
 }
 
 .sub-header + .sub-language {
@@ -306,6 +337,12 @@ header:hover {
 
 .sub-header:hover + .sub-language {
     opacity: 1;
+}
+
+@media (hover: none) {
+    .sub-header + .sub-language {
+        opacity: 1;
+    }
 }
 
 .project-buttons {
@@ -361,6 +398,12 @@ p {
 .contacts svg:hover {
     transform: scale(1.5);
     opacity: 1;
+}
+
+@media (hover: none) {
+    .contacts i, .contacts svg {
+        opacity: 1;
+    }
 }
 
 .contacts {
