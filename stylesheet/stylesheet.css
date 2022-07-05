@@ -231,12 +231,18 @@ header {
     line-height: 26px;
 }
 
-.sub-language {
+.sub-header + .sub-language {
     display: flex;
     gap: 15px;
     height: 30px;
+    opacity: 0;
     margin-top: -5px;
     font-size: 30px;
+    transition: 1.5s;
+}
+
+.sub-header:hover + .sub-language {
+    opacity: 1;
 }
 
 .project-buttons {
