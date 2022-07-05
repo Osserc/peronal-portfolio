@@ -13,7 +13,6 @@ emblemHTML.classList.add("devicon-html5-plain", "colored");
 
 function placeSymbol () {
     const container = document.querySelector(`#l-${this.id}`);
-    console.log(this.id);
     switch (this.id) {
         case "monkebook":
             container.appendChild(emblemRuby);
@@ -43,7 +42,6 @@ function placeSymbol () {
 function removeSymbol () {
     const container = document.querySelector(`#l-${this.id}`);
     container.replaceChildren();
-    // container.removeChild(container.lastChild);
     this.removeEventListener("mouseleave", removeSymbol);
     this.addEventListener("mouseenter", placeSymbol);
 }
