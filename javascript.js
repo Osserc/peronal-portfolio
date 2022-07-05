@@ -1,22 +1,17 @@
-const header = document.getElementById('monkebook');
-header.addEventListener('mouseenter', placeSymbol);
+document.querySelectorAll(".sub-header").forEach(item => item.addEventListener("mouseenter", placeSymbol));
 
 function placeSymbol () {
-    const container = document.createElement('div');
-    container.classList.add('test');
-    const stemma = document.createElement('img');
-    stemma.src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg";
-
-    stemma.width = 24;
-    stemma.height = 24;
-    container.appendChild(stemma);
-    header.appendChild(container);
-    header.removeEventListener('mouseenter', placeSymbol);
-    header.addEventListener('mouseleave', removeSymbol);
+    const container = document.querySelector("#l-monkebook.sub-language");
+    const emblem = document.createElement("i");
+    emblem.classList.add("devicon-ruby-plain", "colored");
+    container.appendChild(emblem);
+    this.removeEventListener("mouseenter", placeSymbol);
+    this.addEventListener("mouseleave", removeSymbol);
 }
 
 function removeSymbol () {
-    header.removeChild(header.lastChild);
-    header.removeEventListener('mouseleave', removeSymbol);
-    header.addEventListener('mouseenter', placeSymbol);
+    const container = document.querySelector("#l-monkebook.sub-language");
+    container.removeChild(container.lastChild);
+    this.removeEventListener("mouseleave", removeSymbol);
+    this.addEventListener("mouseenter", placeSymbol);
 }

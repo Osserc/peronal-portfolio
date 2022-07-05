@@ -199,11 +199,6 @@ header {
     grid-area: monkebook;
 }
 
-.test {
-    margin-top: 10px;
-    margin-bottom: -15px;
-}
-
 .chess {
     grid-area: chess;
 }
@@ -235,6 +230,11 @@ header {
     width: 50%;
     font-size: 32px;
     line-height: 26px;
+}
+
+.sub-language {
+    margin-top: -10px;
+    font-size: 30px;
 }
 
 .project-buttons {
