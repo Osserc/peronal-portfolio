@@ -98,6 +98,11 @@ header {
     padding-top: 15px;
     margin-bottom: -15px;
     animation: 2s change-color infinite alternate;
+    transition: 1.5s;
+}
+
+header:hover {
+    letter-spacing: 3px;
 }
 
 @keyframes change-color {
@@ -119,7 +124,7 @@ header {
     font-size: 24px;
     opacity: 0.8;
     gap: 15px;
-    box-shadow: 0 0 100px black;
+    box-shadow: 0 0 100px rgb(0, 0, 0, 0);
     transition: 1s;
 }
 
@@ -178,6 +183,20 @@ header {
     }
 }
 
+.portrait {
+    transition: 1.5s;
+}
+
+.portrait:hover {
+    transform: perspective(1000px) rotateY(15deg);
+}
+
+@media (max-width: 800px) {
+    .portrait:hover {
+        transform: perspective(1000px) rotateX(-15deg);
+    }
+}
+
 .single-project {
     display: flex;
     flex-direction: column;
@@ -190,6 +209,7 @@ header {
     width: 75%;
     margin: 0 auto;
     gap: 5px;
+    transform: scale(0.9);
     opacity: 0.35;
     background-color: rgb(53, 5, 5);
     box-shadow: 0 0 100px black;
@@ -199,26 +219,32 @@ header {
 .single-project:hover {
     opacity: 1;
     box-shadow: 0px 0px 10px 2px gold;
+    transform: scale(1);
 }
 
 .monkebook {
     grid-area: monkebook;
+    animation: 3.5s slide-left;
 }
 
 .chess {
     grid-area: chess;
+    animation: 3.5s slide-right;
 }
 
 .games {
     grid-area: games;
+    animation: 3.5s slide-left;
 }
 
 .data-structures {
     grid-area: data-structures;
+    animation: 3.5s slide-right;
 }
 
 .old-js {
     grid-area: old-js;
+    animation: 3.5s spring-up;
     width: 50%;
     margin: auto;
 }
@@ -226,6 +252,37 @@ header {
 @media (max-width: 600px) {
     .old-js {
         width: 75%;
+        animation: 3.5s slide-left;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100%) scale(0.2);
+    }
+
+    100% {
+        transform: translateX(0%) scale(0.9);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(100%) scale(0.2);
+    }
+
+    100% {
+        transform: translateX(0%) scale(0.9);
+    }
+}
+
+@keyframes spring-up {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0.9);
     }
 }
 
