@@ -128,7 +128,7 @@ header:hover {
     transition: 1s;
 }
 
-.about-me:hover {
+.about-me:hover, .about-me:focus {
     opacity: 1;
     box-shadow: 0px 0px 10px 2px gold;
 }
@@ -216,7 +216,7 @@ header:hover {
     transition: 1.5s
 }
 
-.single-project:hover {
+.single-project:hover, .single-project:active {
     opacity: 1;
     box-shadow: 0px 0px 10px 2px gold;
     transform: scale(1);
