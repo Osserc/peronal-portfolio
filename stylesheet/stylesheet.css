@@ -139,8 +139,8 @@ header:hover {
     display: grid;
     grid-template:
         [row1-start] "monkebook chess" auto [row1-end]
-        [row2-start] "games data-structures" auto [row2-end]
-        [row3-start] "old-js old-js" auto [row3-end]
+        [row2-start] "to-do games" auto [row2-end]
+        [row3-start] "data-structures old-js" auto [row3-end]
         / 1fr 1fr;
     gap: 15px;
 }
@@ -202,21 +202,26 @@ header:hover {
     animation: 3.5s slide-right;
 }
 
+.to-do {
+    grid-area: to-do;
+    animation: 3.5s slide-left;
+}
+
 .games {
     grid-area: games;
-    animation: 3.5s slide-left;
+    animation: 3.5s slide-right;
 }
 
 .data-structures {
     grid-area: data-structures;
-    animation: 3.5s slide-right;
+    animation: 3.5s slide-left;
 }
 
 .old-js {
     grid-area: old-js;
-    animation: 3.5s spring-up;
-    width: 50%;
-    margin: auto;
+    animation: 3.5s slide-right;
+    /* width: 50%;
+    margin: auto; */
 }
 
 .sub-header {
@@ -238,7 +243,8 @@ header:hover {
     justify-content: center;
     gap: 15px;
     width: 100%;
-    height: 30px;
+    min-height: 30px;
+    flex-wrap: wrap;
     opacity: 0;
     margin-top: -5px;
     font-size: 30px;
@@ -363,10 +369,10 @@ p {
         text-align: center;
     }
 
-    .old-js {
+    /* .old-js {
         width: 75%;
         animation: 3.5s slide-left;
-    }
+    } */
 }
 
 /* keyframes */
